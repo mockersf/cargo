@@ -1750,7 +1750,7 @@ fn json_artifact_includes_executable_for_benchmark() {
                         "name": "benchmark",
                         "src_path": "[..]/foo/benches/benchmark.rs",
                         "test": false,
-                        "metadata": false
+                        "metadata": null
                     }
                 }
 
