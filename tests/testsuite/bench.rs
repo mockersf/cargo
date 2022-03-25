@@ -1749,7 +1749,8 @@ fn json_artifact_includes_executable_for_benchmark() {
                         "edition": "2015",
                         "name": "benchmark",
                         "src_path": "[..]/foo/benches/benchmark.rs",
-                        "test": false
+                        "test": false,
+                        "metadata": false
                     }
                 }
 
