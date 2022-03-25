@@ -3656,7 +3656,8 @@ fn json_artifact_includes_test_flag() {
                         "edition": "2015",
                         "name":"foo",
                         "src_path":"[..]lib.rs",
-                        "test": true
+                        "test": true,
+                        "metadata": null
                     },
                     "filenames":"{...}",
                     "fresh": false
@@ -3695,7 +3696,8 @@ fn json_artifact_includes_executable_for_library_tests() {
                         "edition": "2015",
                         "name": "foo",
                         "src_path": "[..]/foo/src/lib.rs",
-                        "test": true
+                        "test": true,
+                        "metadata": null
                     }
                 }
 
@@ -3734,7 +3736,8 @@ fn json_artifact_includes_executable_for_integration_tests() {
                         "edition": "2015",
                         "name": "integration_test",
                         "src_path": "[..]/foo/tests/integration_test.rs",
-                        "test": true
+                        "test": true,
+                        "metadata": null
                     }
                 }
 

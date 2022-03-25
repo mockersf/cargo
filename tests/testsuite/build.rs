@@ -3773,7 +3773,8 @@ fn compiler_json_error_format() {
                     "edition": "2015",
                     "name":"build-script-build",
                     "src_path":"[..]build.rs",
-                    "test": false
+                    "test": false,
+                    "metadata": null
                 },
                 "profile": {
                     "debug_assertions": true,
@@ -3800,7 +3801,8 @@ fn compiler_json_error_format() {
                     "edition": "2015",
                     "name":"bar",
                     "src_path":"[..]lib.rs",
-                    "test": true
+                    "test": true,
+                    "metadata": null
                 },
                 "message":"{...}"
             }
@@ -3826,7 +3828,8 @@ fn compiler_json_error_format() {
                     "edition": "2015",
                     "name":"bar",
                     "src_path":"[..]lib.rs",
-                    "test": true
+                    "test": true,
+                    "metadata": null
                 },
                 "filenames":[
                     "[..].rlib",
@@ -3857,7 +3860,8 @@ fn compiler_json_error_format() {
                     "edition": "2015",
                     "name":"foo",
                     "src_path":"[..]main.rs",
-                    "test": true
+                    "test": true,
+                    "metadata": null
                 },
                 "message":"{...}"
             }
@@ -3874,7 +3878,8 @@ fn compiler_json_error_format() {
                     "edition": "2015",
                     "name":"foo",
                     "src_path":"[..]main.rs",
-                    "test": true
+                    "test": true,
+                    "metadata": null
                 },
                 "profile": {
                     "debug_assertions": true,
@@ -3945,7 +3950,8 @@ fn message_format_json_forward_stderr() {
                         "edition": "2015",
                         "name":"foo",
                         "src_path":"[..]",
-                        "test": true
+                        "test": true,
+                        "metadata": null
                     },
                     "message":"{...}"
                 }
@@ -3962,7 +3968,8 @@ fn message_format_json_forward_stderr() {
                         "edition": "2015",
                         "name":"foo",
                         "src_path":"[..]",
-                        "test": true
+                        "test": true,
+                        "metadata": null
                     },
                     "profile":{
                         "debug_assertions":false,

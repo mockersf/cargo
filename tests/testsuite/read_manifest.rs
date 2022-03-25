@@ -35,7 +35,8 @@ fn manifest_output(readme_value: &str) -> String {
         "test": true,
         "edition": "2015",
         "name":"foo",
-        "src_path":"[..]/foo/src/foo.rs"
+        "src_path":"[..]/foo/src/foo.rs",
+        "metadata": null
     }}],
     "features":{{}},
     "manifest_path":"[..]Cargo.toml",

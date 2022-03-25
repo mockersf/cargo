@@ -708,7 +708,8 @@ fn metabuild_json_artifact() {
                 ],
                 "name": "metabuild-foo",
                 "src_path": "[..]/foo/target/.metabuild/metabuild-foo-[..].rs",
-                "test": false
+                "test": false,
+                "metadata": null
               }
             }
 
@@ -760,7 +761,8 @@ fn metabuild_failed_build_json() {
                 ],
                 "name": "metabuild-foo",
                 "src_path": null,
-                "test": false
+                "test": false,
+                "metadata": null
               }
             }
             "#,

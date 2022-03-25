@@ -2032,6 +2032,10 @@ struct TomlTarget {
     #[serde(rename = "required-features")]
     required_features: Option<Vec<String>>,
     edition: Option<String>,
+
+    // Note that this field must come last due to the way toml serialization
+    // works which requires tables to be emitted after all values.
+    metadata: Option<toml::Value>,
 }
 
 #[derive(Clone)]

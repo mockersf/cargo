@@ -1,3 +1,4 @@
+use std::cmp::Ordering;
 use std::collections::{BTreeMap, HashMap};
 use std::fmt;
 use std::hash::{Hash, Hasher};
@@ -211,6 +212,38 @@ struct TargetInner {
     for_host: bool,
     proc_macro: bool,
     edition: Edition,
+    // Using a custom wrapper around `toml::Value` to be able to derive on
+    // `TargetInner`. Changing metadata shouldn't cause a rebuild.
+    custom_metadata: Option<CustomMetadataWrapper>,
+}
+
+#[derive(Clone)]
+struct CustomMetadataWrapper(toml::Value);
+impl Hash for CustomMetadataWrapper {
+    fn hash<H: Hasher>(&self, _: &mut H) {
+        // ...
+    }
+}
+impl PartialEq for CustomMetadataWrapper {
+    fn eq(&self, _: &Self) -> bool {
+        true
+    }
+}
+impl Eq for CustomMetadataWrapper {}
+impl PartialOrd for CustomMetadataWrapper {
+    fn partial_cmp(&self, _: &Self) -> Option<Ordering> {
+        Some(Ordering::Equal)
+    }
+}
+impl Ord for CustomMetadataWrapper {
+    fn cmp(&self, _: &Self) -> std::cmp::Ordering {
+        Ordering::Equal
+    }
+}
+impl fmt::Debug for CustomMetadataWrapper {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> Result<(), fmt::Error> {
+        self.0.fmt(f)
+    }
 }
 
 #[derive(Clone, PartialEq, Eq, PartialOrd, Ord)]
@@ -273,6 +306,7 @@ struct SerializedTarget<'a> {
     doctest: bool,
     /// Whether tests should be run for the target (`test` field in `Cargo.toml`)
     test: bool,
+    metadata: Option<toml::Value>,
 }
 
 impl ser::Serialize for Target {
@@ -295,6 +329,7 @@ impl ser::Serialize for Target {
             doc: self.documented(),
             doctest: self.doctested() && self.doctestable(),
             test: self.tested(),
+            metadata: self.custom_metadata().cloned(),
         }
         .serialize(s)
     }
@@ -364,6 +399,7 @@ compact_debug! {
                 for_host
                 proc_macro
                 edition
+                custom_metadata
             )]
         }
     }
@@ -642,6 +678,7 @@ impl Target {
                 edition,
                 tested: true,
                 benched: true,
+                custom_metadata: None,
             }),
         }
     }
@@ -933,6 +970,11 @@ impl Target {
         Arc::make_mut(&mut self.inner).required_features = required_features;
         self
     }
+    pub fn set_custom_metadata(&mut self, custom_metadata: Option<toml::Value>) -> &mut Target {
+        Arc::make_mut(&mut self.inner).custom_metadata =
+            custom_metadata.map(|value| CustomMetadataWrapper(value));
+        self
+    }
     pub fn binary_filename(&self) -> Option<String> {
         self.inner.bin_name.clone()
     }
@@ -947,6 +989,10 @@ impl Target {
             }
             TargetKind::CustomBuild => "build script".to_string(),
         }
+    }
+
+    pub fn custom_metadata(&self) -> Option<&toml::Value> {
+        self.inner.custom_metadata.as_ref().map(|cm| &cm.0)
     }
 }
 

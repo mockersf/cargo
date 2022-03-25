@@ -479,7 +479,8 @@ fn update_precise_first_run() {
             "lib"
           ],
           "name": "bar",
-          "src_path": "[..]/foo/src/lib.rs"
+          "src_path": "[..]/foo/src/lib.rs",
+          "metadata": null
         }
       ],
       "version": "0.0.1"
@@ -520,7 +521,8 @@ fn update_precise_first_run() {
           ],
           "name": "serde",
           "src_path": "[..]/home/.cargo/registry/src/-[..]/serde-0.2.0/src/lib.rs",
-          "test": true
+          "test": true,
+          "metadata": null
         }
       ],
       "version": "0.2.0"

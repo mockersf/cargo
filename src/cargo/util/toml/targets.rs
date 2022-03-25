@@ -812,7 +812,8 @@ fn configure(toml: &TomlTarget, target: &mut Target) -> CargoResult<()> {
             (None, None) => t2.for_host(),
             (Some(true), _) | (_, Some(true)) => true,
             (Some(false), _) | (_, Some(false)) => false,
-        });
+        })
+        .set_custom_metadata(toml.metadata.clone());
     if let Some(edition) = toml.edition.clone() {
         target.set_edition(
             edition

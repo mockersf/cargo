@@ -1709,7 +1709,8 @@ fn doc_json_artifacts() {
         "edition": "2015",
         "doc": true,
         "doctest": true,
-        "test": true
+        "test": true,
+        "metadata": null
     },
     "profile": "{...}",
     "features": [],
@@ -1731,7 +1732,8 @@ fn doc_json_artifacts() {
         "edition": "2015",
         "doc": true,
         "doctest": true,
-        "test": true
+        "test": true,
+        "metadata": null
     },
     "profile": "{...}",
     "features": [],
@@ -1753,7 +1755,8 @@ fn doc_json_artifacts() {
         "edition": "2015",
         "doc": true,
         "doctest": false,
-        "test": true
+        "test": true,
+        "metadata": null
     },
     "profile": "{...}",
     "features": [],

@@ -90,7 +90,8 @@ fn simple_with_message_format() {
                     "edition": "2015",
                     "doc": true,
                     "doctest": true,
-                    "test": true
+                    "test": true,
+                    "metadata": null
                 },
                 "profile": "{...}",
                 "features": [],
@@ -115,7 +116,8 @@ fn simple_with_message_format() {
                     "edition": "2015",
                     "doc": true,
                     "doctest": false,
-                    "test": true
+                    "test": true,
+                    "metadata": null
                 },
                 "profile": "{...}",
                 "features": [],

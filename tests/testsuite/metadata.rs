@@ -55,7 +55,8 @@ fn cargo_metadata_simple() {
                         "test": true,
                         "edition": "2015",
                         "name": "foo",
-                        "src_path": "[..]/foo/src/foo.rs"
+                        "src_path": "[..]/foo/src/foo.rs",
+                        "metadata": null
                     }
                 ],
                 "features": {},
@@ -154,7 +155,8 @@ crate-type = ["lib", "staticlib"]
                         "test": true,
                         "edition": "2015",
                         "name": "foo",
-                        "src_path": "[..]/foo/src/lib.rs"
+                        "src_path": "[..]/foo/src/lib.rs",
+                        "metadata": null
                     }
                 ],
                 "features": {},
@@ -241,7 +243,8 @@ optional_feat = []
                         "test": true,
                         "edition": "2015",
                         "name": "foo",
-                        "src_path": "[..]/foo/src/lib.rs"
+                        "src_path": "[..]/foo/src/lib.rs",
+                        "metadata": null
                     }
                 ],
                 "features": {
@@ -362,7 +365,8 @@ fn cargo_metadata_with_deps_and_version() {
                             "lib"
                         ],
                         "name": "bar",
-                        "src_path": "[..]src/lib.rs"
+                        "src_path": "[..]src/lib.rs",
+                        "metadata": null
                     }
                 ],
                 "version": "0.0.1"
@@ -403,7 +407,8 @@ fn cargo_metadata_with_deps_and_version() {
                             "lib"
                         ],
                         "name": "baz",
-                        "src_path": "[..]src/lib.rs"
+                        "src_path": "[..]src/lib.rs",
+                        "metadata": null
                     }
                 ],
                 "version": "0.0.1"
@@ -469,7 +474,8 @@ fn cargo_metadata_with_deps_and_version() {
                             "bin"
                         ],
                         "name": "foo",
-                        "src_path": "[..]src/foo.rs"
+                        "src_path": "[..]src/foo.rs",
+                        "metadata": null
                     }
                 ],
                 "version": "0.5.0"
@@ -510,7 +516,8 @@ fn cargo_metadata_with_deps_and_version() {
                             "lib"
                         ],
                         "name": "foobar",
-                        "src_path": "[..]src/lib.rs"
+                        "src_path": "[..]src/lib.rs",
+                        "metadata": null
                     }
                 ],
                 "version": "0.0.1"
@@ -646,7 +653,8 @@ name = "ex"
                         "test": true,
                         "edition": "2015",
                         "name": "foo",
-                        "src_path": "[..]/foo/src/lib.rs"
+                        "src_path": "[..]/foo/src/lib.rs",
+                        "metadata": null
                     },
                     {
                         "kind": [ "example" ],
@@ -656,7 +664,8 @@ name = "ex"
                         "test": false,
                         "edition": "2015",
                         "name": "ex",
-                        "src_path": "[..]/foo/examples/ex.rs"
+                        "src_path": "[..]/foo/examples/ex.rs",
+                        "metadata": null
                     }
                 ],
                 "features": {},
@@ -741,7 +750,8 @@ crate-type = ["rlib", "dylib"]
                         "test": true,
                         "edition": "2015",
                         "name": "foo",
-                        "src_path": "[..]/foo/src/lib.rs"
+                        "src_path": "[..]/foo/src/lib.rs",
+                        "metadata": null
                     },
                     {
                         "kind": [ "example" ],
@@ -751,7 +761,8 @@ crate-type = ["rlib", "dylib"]
                         "test": false,
                         "edition": "2015",
                         "name": "ex",
-                        "src_path": "[..]/foo/examples/ex.rs"
+                        "src_path": "[..]/foo/examples/ex.rs",
+                        "metadata": null
                     }
                 ],
                 "features": {},
@@ -843,7 +854,8 @@ fn workspace_metadata() {
                         "test": true,
                         "edition": "2015",
                         "name": "bar",
-                        "src_path": "[..]bar/src/lib.rs"
+                        "src_path": "[..]bar/src/lib.rs",
+                        "metadata": null
                     }
                 ],
                 "features": {},
@@ -882,7 +894,8 @@ fn workspace_metadata() {
                         "test": true,
                         "edition": "2015",
                         "name": "baz",
-                        "src_path": "[..]baz/src/lib.rs"
+                        "src_path": "[..]baz/src/lib.rs",
+                        "metadata": null
                     }
                 ],
                 "features": {},
@@ -1027,7 +1040,8 @@ fn workspace_metadata_with_dependencies_no_deps() {
                         "test": true,
                         "edition": "2015",
                         "name": "bar",
-                        "src_path": "[..]bar/src/lib.rs"
+                        "src_path": "[..]bar/src/lib.rs",
+                        "metadata": null
                     }
                 ],
                 "features": {},
@@ -1073,7 +1087,8 @@ fn workspace_metadata_with_dependencies_no_deps() {
                   ],
                   "name": "artifact",
                   "src_path": "[..]/foo/artifact/src/main.rs",
-                  "test": true
+                  "test": true,
+                  "metadata": null
                 }
               ],
               "version": "0.5.0"
@@ -1109,7 +1124,8 @@ fn workspace_metadata_with_dependencies_no_deps() {
                         "test": true,
                         "edition": "2015",
                         "name": "baz",
-                        "src_path": "[..]baz/src/lib.rs"
+                        "src_path": "[..]baz/src/lib.rs",
+                        "metadata": null
                     }
                 ],
                 "features": {},
@@ -1266,7 +1282,8 @@ fn workspace_metadata_with_dependencies_and_resolve() {
                       ],
                       "name": "artifact",
                       "src_path": "[..]/foo/artifact/src/lib.rs",
-                      "test": true
+                      "test": true,
+                      "metadata": null
                     },
                     {
                       "crate_types": [
@@ -1280,7 +1297,8 @@ fn workspace_metadata_with_dependencies_and_resolve() {
                       ],
                       "name": "bar-name",
                       "src_path": "[..]/foo/artifact/src/main.rs",
-                      "test": true
+                      "test": true,
+                      "metadata": null
                     },
                     {
                       "crate_types": [
@@ -1294,7 +1312,8 @@ fn workspace_metadata_with_dependencies_and_resolve() {
                       ],
                       "name": "baz-name",
                       "src_path": "[..]/foo/artifact/src/main.rs",
-                      "test": true
+                      "test": true,
+                      "metadata": null
                     }
                   ],
                   "version": "0.5.0"
@@ -1490,7 +1509,8 @@ fn workspace_metadata_with_dependencies_and_resolve() {
                       ],
                       "name": "bar",
                       "src_path": "[..]/foo/bar/src/lib.rs",
-                      "test": true
+                      "test": true,
+                      "metadata": null
                     },
                     {
                       "crate_types": [
@@ -1504,7 +1524,8 @@ fn workspace_metadata_with_dependencies_and_resolve() {
                       ],
                       "name": "build-script-build",
                       "src_path": "[..]/foo/bar/build.rs",
-                      "test": false
+                      "test": false,
+                      "metadata": null
                     }
                   ],
                   "version": "0.5.0"
@@ -1545,7 +1566,8 @@ fn workspace_metadata_with_dependencies_and_resolve() {
                       ],
                       "name": "a-name",
                       "src_path": "[..]/foo/bin-only-artifact/src/main.rs",
-                      "test": true
+                      "test": true,
+                      "metadata": null
                     },
                     {
                       "crate_types": [
@@ -1559,7 +1581,8 @@ fn workspace_metadata_with_dependencies_and_resolve() {
                       ],
                       "name": "b-name",
                       "src_path": "[..]/foo/bin-only-artifact/src/main.rs",
-                      "test": true
+                      "test": true,
+                      "metadata": null
                     }
                   ],
                   "version": "0.5.0"
@@ -1600,7 +1623,8 @@ fn workspace_metadata_with_dependencies_and_resolve() {
                       ],
                       "name": "non-artifact",
                       "src_path": "[..]/foo/non-artifact/src/lib.rs",
-                      "test": true
+                      "test": true,
+                      "metadata": null
                     }
                   ],
                   "version": "0.5.0"
@@ -1733,7 +1757,8 @@ const MANIFEST_OUTPUT: &str = r#"
             "test": true,
             "edition": "2015",
             "name":"foo",
-            "src_path":"[..]/foo/src/foo.rs"
+            "src_path":"[..]/foo/src/foo.rs",
+            "metadata": null
         }],
         "features":{},
         "manifest_path":"[..]Cargo.toml",
@@ -1926,7 +1951,8 @@ fn package_metadata() {
                         "test": true,
                         "edition": "2015",
                         "name": "foo",
-                        "src_path": "[..]foo/src/lib.rs"
+                        "src_path": "[..]foo/src/lib.rs",
+                        "metadata": null
                     }
                 ],
                 "features": {},
@@ -2005,7 +2031,8 @@ fn package_publish() {
                         "test": true,
                         "edition": "2015",
                         "name": "foo",
-                        "src_path": "[..]foo/src/lib.rs"
+                        "src_path": "[..]foo/src/lib.rs",
+                        "metadata": null
                     }
                 ],
                 "features": {},
@@ -2088,7 +2115,8 @@ fn cargo_metadata_path_to_cargo_toml_project() {
                             "lib"
                         ],
                         "name": "bar",
-                        "src_path": "[..]src/lib.rs"
+                        "src_path": "[..]src/lib.rs",
+                        "metadata": null
                     }
                     ],
                     "version": "0.5.0"
@@ -2176,7 +2204,8 @@ fn package_edition_2018() {
                                     "lib"
                                 ],
                                 "name": "foo",
-                                "src_path": "[..]src/lib.rs"
+                                "src_path": "[..]src/lib.rs",
+                                "metadata": null
                             }
                         ],
                         "version": "0.1.0"
@@ -2310,7 +2339,8 @@ fn target_edition_2018() {
                                     "lib"
                                 ],
                                 "name": "foo",
-                                "src_path": "[..]src/lib.rs"
+                                "src_path": "[..]src/lib.rs",
+                                "metadata": null
                             },
                             {
                                 "crate_types": [
@@ -2324,7 +2354,8 @@ fn target_edition_2018() {
                                     "bin"
                                 ],
                                 "name": "foo",
-                                "src_path": "[..]src/main.rs"
+                                "src_path": "[..]src/main.rs",
+                                "metadata": null
                             }
                         ],
                         "version": "0.1.0"
@@ -2417,7 +2448,8 @@ fn rename_dependency() {
                         "lib"
                     ],
                     "name": "bar",
-                    "src_path": "[..]"
+                    "src_path": "[..]",
+                    "metadata": null
                 }
             ],
             "version": "0.1.0"
@@ -2458,7 +2490,8 @@ fn rename_dependency() {
                         "lib"
                     ],
                     "name": "bar",
-                    "src_path": "[..]"
+                    "src_path": "[..]",
+                    "metadata": null
                 }
             ],
             "version": "0.2.0"
@@ -2524,7 +2557,8 @@ fn rename_dependency() {
                         "lib"
                     ],
                     "name": "foo",
-                    "src_path": "[..]"
+                    "src_path": "[..]",
+                    "metadata": null
                 }
             ],
             "version": "0.0.1"
@@ -2646,7 +2680,8 @@ fn metadata_links() {
                         "lib"
                       ],
                       "name": "foo",
-                      "src_path": "[..]/foo/src/lib.rs"
+                      "src_path": "[..]/foo/src/lib.rs",
+                      "metadata": null
                     },
                     {
                       "crate_types": [
@@ -2660,7 +2695,8 @@ fn metadata_links() {
                         "custom-build"
                       ],
                       "name": "build-script-build",
-                      "src_path": "[..]/foo/build.rs"
+                      "src_path": "[..]/foo/build.rs",
+                      "metadata": null
                     }
                   ],
                   "version": "0.5.0"
@@ -2749,7 +2785,8 @@ fn deps_with_bin_only() {
                       "edition": "2015",
                       "doc": true,
                       "doctest": true,
-                      "test": true
+                      "test": true,
+                      "metadata": null
                     }
                   ],
                   "features": {},
@@ -2854,7 +2891,8 @@ fn filter_platform() {
           "edition": "2015",
           "test": true,
           "doc": true,
-          "doctest": true
+          "doctest": true,
+          "metadata": null
         }
       ],
       "features": {},
@@ -2898,7 +2936,8 @@ fn filter_platform() {
           "edition": "2015",
           "test": true,
           "doc": true,
-          "doctest": true
+          "doctest": true,
+          "metadata": null
         }
       ],
       "features": {},
@@ -2942,7 +2981,8 @@ fn filter_platform() {
           "edition": "2015",
           "test": true,
           "doc": true,
-          "doctest": true
+          "doctest": true,
+          "metadata": null
         }
       ],
       "features": {},
@@ -2986,7 +3026,8 @@ fn filter_platform() {
           "edition": "2015",
           "test": true,
           "doc": true,
-          "doctest": true
+          "doctest": true,
+          "metadata": null
         }
       ],
       "features": {},
@@ -3093,7 +3134,8 @@ fn filter_platform() {
           "edition": "2015",
           "test": true,
           "doc": true,
-          "doctest": true
+          "doctest": true,
+          "metadata": null
         }
       ],
       "features": {},
@@ -3877,7 +3919,8 @@ fn workspace_metadata_with_dependencies_no_deps_artifact() {
                       ],
                       "name": "bar",
                       "src_path": "[..]/foo/bar/src/lib.rs",
-                      "test": true
+                      "test": true,
+                      "metadata": null
                     }
                   ],
                   "version": "0.5.0"
@@ -3920,7 +3963,8 @@ fn workspace_metadata_with_dependencies_no_deps_artifact() {
                       ],
                       "name": "artifact",
                       "src_path": "[..]/foo/artifact/src/main.rs",
-                      "test": true
+                      "test": true,
+                      "metadata": null
                     }
                   ],
                   "version": "0.5.0"
@@ -3963,7 +4007,8 @@ fn workspace_metadata_with_dependencies_no_deps_artifact() {
                       ],
                       "name": "baz",
                       "src_path": "[..]/foo/baz/src/lib.rs",
-                      "test": true
+                      "test": true,
+                      "metadata": null
                     }
                   ],
                   "version": "0.5.0"
@@ -3980,6 +4025,109 @@ fn workspace_metadata_with_dependencies_no_deps_artifact() {
               "workspace_root": "[..]/foo"
             }
 "#,
+        )
+        .run();
+}
+
+#[cargo_test]
+fn target_metadata() {
+    let p = project()
+        .file(
+            "Cargo.toml",
+            r#"
+                [package]
+                name = "foo"
+                version = "0.1.0"
+                authors = ["wycats@example.com"]
+                categories = ["database"]
+                keywords = ["database"]
+                readme = "README.md"
+                repository = "https://github.com/rust-lang/cargo"
+                homepage = "https://rust-lang.org"
+                documentation = "https://doc.rust-lang.org/stable/std/"
+
+                [[example]]
+                name = "bar"
+                path = "baz/bar.rs"
+
+                [example.metadata.baz]
+                bar = "quux"
+            "#,
+        )
+        .file("README.md", "")
+        .file("src/lib.rs", "")
+        .build();
+
+    p.cargo("metadata --no-deps")
+        .with_json(
+            r#"
+    {
+        "packages": [
+            {
+                "authors": ["wycats@example.com"],
+                "categories": ["database"],
+                "default_run": null,
+                "name": "foo",
+                "readme": "README.md",
+                "repository": "https://github.com/rust-lang/cargo",
+                "rust_version": null,
+                "homepage": "https://rust-lang.org",
+                "documentation": "https://doc.rust-lang.org/stable/std/",
+                "version": "0.1.0",
+                "id": "foo[..]",
+                "keywords": ["database"],
+                "source": null,
+                "dependencies": [],
+                "edition": "2015",
+                "license": null,
+                "license_file": null,
+                "links": null,
+                "description": null,
+                "targets": [
+                    {
+                        "kind": [ "lib" ],
+                        "crate_types": [ "lib" ],
+                        "doc": true,
+                        "doctest": true,
+                        "test": true,
+                        "edition": "2015",
+                        "name": "foo",
+                        "src_path": "[..]foo/src/lib.rs",
+                        "metadata": null
+                    },
+                    {
+                      "crate_types": [
+                        "bin"
+                      ],
+                      "doc": false,
+                      "doctest": false,
+                      "edition": "2015",
+                      "kind": [
+                        "example"
+                      ],
+                      "metadata": {
+                        "baz": {
+                          "bar": "quux"
+                        }
+                      },
+                      "name": "bar",
+                      "src_path": "[..]foo/baz/bar.rs",
+                      "test": false
+                    }
+                ],
+                "features": {},
+                "manifest_path": "[..]foo/Cargo.toml",
+                "metadata": null,
+                "publish": null
+            }
+        ],
+        "workspace_members": ["foo[..]"],
+        "resolve": null,
+        "target_directory": "[..]foo/target",
+        "version": 1,
+        "workspace_root": "[..]/foo",
+        "metadata": null
+    }"#,
         )
         .run();
 }

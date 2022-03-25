@@ -95,7 +95,8 @@ fn simple() {
                     ],
                     "name": "a",
                     "src_path": "[..]/a-1.0.0/src/lib.rs",
-                    "test": true
+                    "test": true,
+                    "metadata": null
                   }
                 },
                 {
@@ -140,7 +141,8 @@ fn simple() {
                     ],
                     "name": "b",
                     "src_path": "[..]/b-1.0.0/src/lib.rs",
-                    "test": true
+                    "test": true,
+                    "metadata": null
                   }
                 },
                 {
@@ -178,7 +180,8 @@ fn simple() {
                     ],
                     "name": "c",
                     "src_path": "[..]/c-1.0.0/src/lib.rs",
-                    "test": true
+                    "test": true,
+                    "metadata": null
                   }
                 },
                 {
@@ -221,7 +224,8 @@ fn simple() {
                     ],
                     "name": "foo",
                     "src_path": "[..]/foo/src/lib.rs",
-                    "test": true
+                    "test": true,
+                    "metadata": null
                   }
                 }
               ],
